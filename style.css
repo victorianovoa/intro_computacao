@@ -1,0 +1,88 @@
+body {
+    background-color: #000000;
+    color: #ff4ecb;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    margin: 0;
+  }
+  h1, h2, h3 {
+    color: #ff66e0;
+    text-shadow: 0 0 5px #ff99eb;
+  }
+  .linha {
+    border-bottom: 1px solid #ff66e0;
+    margin: 10px 0;
+  }
+  .prompt::before {
+    content: '> ';
+    color: #ff66e0;
+  }
+  .bloco {
+    border: 1px solid #ff66e0;
+    padding: 10px;
+    margin: 15px 0;
+    background-color: #0d0d0d;
+  }
+  a {
+    color: #ff99eb;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  .digitando {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #ff66e0;
+    width: 0;
+    animation: typing 3s steps(40, end) forwards;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background: #ff66e0;
+    margin: 4px 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+  ul li a {
+    color: #ff99eb;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    ul {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    ul.active {
+      display: flex;
+    }
+    .menu-toggle {
+      display: flex;
+    }
+  }
